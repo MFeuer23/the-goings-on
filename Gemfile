@@ -11,6 +11,8 @@ gem 'pg', '~> 0.18.4'
 gem 'puma', '~> 3.11'
 # Use foreman to manage multiple processes
 gem 'foreman', '~> 0.82.0'
+# Use RestClient to make API requests
+gem 'rest-client'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
