@@ -1,10 +1,10 @@
 class CreateEvents < ActiveRecord::Migration[5.2]
   def change
     create_table :events do |t|
-      t.title :string
-      t.category :string
-      t.ongoing :boolean
-      t.article_url :string
+      t.string :title
+      t.string :category
+      t.boolean :ongoing
+      t.string :article_url
       t.timestamps
     end
   end
