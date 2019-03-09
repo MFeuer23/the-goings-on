@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchEvents } from '../actions/EventActions'
+import { fetchEvents } from './actions/EventActions'
 
 class EventsForm extends Component {
   constructor() {
