@@ -60,4 +60,4 @@ class EventsForm extends Component {
 
 }
 
-export default EventsForm;
+export default connect(null, {fetchEvents})(EventsForm);
