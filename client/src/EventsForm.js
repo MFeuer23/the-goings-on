@@ -5,7 +5,7 @@ class EventsForm extends Component {
     super();
     this.state = {
       category: '',
-      ongoing: ''
+      status: ''
     }
   }
 
@@ -29,8 +29,13 @@ class EventsForm extends Component {
           <option value="13">Water Color</option>
           <option value="8">Wildfires</option>
         </select>
-
-
+        <br>
+        Ongoing:
+        <select name="ongoing">
+          <option value="open">Ongoing</option>
+          <option value="closed">Past</option>
+        </select>
+        <input type="submit">
       </form>
     )
   }
