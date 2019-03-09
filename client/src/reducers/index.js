@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import catsReducer from "./cats_reducer"
+import eventsReducer from "./events_reducer"
 
 const rootReducer = combineReducers({
   events: eventsReducer
