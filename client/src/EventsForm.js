@@ -9,11 +9,17 @@ class EventsForm extends Component {
     }
   }
 
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
   render(){
     return (
       <form>
         Category:
-        <select name="category">
+        <select name="category" onChange={this.handleChange}>
           <option value="all">All</option>
           <option value="6">Drought</option>
           <option value="7">Dust and Haze</option>
@@ -29,13 +35,14 @@ class EventsForm extends Component {
           <option value="13">Water Color</option>
           <option value="8">Wildfires</option>
         </select>
-        <br>
+        <br />
         Ongoing:
-        <select name="ongoing">
+        <select name="status" onChange={this.handleChange}>
           <option value="open">Ongoing</option>
           <option value="closed">Past</option>
         </select>
-        <input type="submit">
+        <br />
+        <input type="submit"/>
       </form>
     )
   }
