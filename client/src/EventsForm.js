@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { fetchEvents } from '../actions/EventActions'
 
 class EventsForm extends Component {
   constructor() {
@@ -12,6 +14,15 @@ class EventsForm extends Component {
   handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
+    })
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    this.props.fetchEvents(this.state)
+    this.setState({
+      category: '',
+      status: ''
     })
   }
 
