@@ -6,8 +6,8 @@ class EventsForm extends Component {
   constructor() {
     super();
     this.state = {
-      category: '',
-      status: ''
+      category: 'all',
+      status: 'open'
     }
   }
 
@@ -20,10 +20,6 @@ class EventsForm extends Component {
   handleSubmit = (event) => {
     event.preventDefault();
     this.props.fetchEvents(this.state)
-    this.setState({
-      category: '',
-      status: ''
-    })
   }
 
   render(){
@@ -47,7 +43,7 @@ class EventsForm extends Component {
           <option value="8">Wildfires</option>
         </select>
         <br />
-        Ongoing:
+        Status:
         <select name="status" onChange={this.handleChange}>
           <option value="open">Ongoing</option>
           <option value="closed">Past</option>
