@@ -1,8 +1,11 @@
 class EventsController < ApplicationController
   def events
 
-
-    url = "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events?source=EO&limit=3"
+    if params[:category] == "all"
+      url = "https://eonet.sci.gsfc.nasa.gov/api/v2.1/events?source=EO&limit=3status=#{params[:status]}"
+    else
+      url = "https://eonet.sci.gsfc.nasa.gov/api/v2.1/categories/#{params[:category]}?source=EO&limit=3status=#{params[:status]}"
+    end
 
     begin
     response = RestClient::Request.execute(
