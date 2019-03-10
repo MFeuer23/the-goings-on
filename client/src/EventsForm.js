@@ -28,7 +28,7 @@ class EventsForm extends Component {
 
   render(){
     return (
-      <form>
+      <form onSubmit={event => this.handleSubmit(event)}>
         Category:
         <select name="category" onChange={this.handleChange}>
           <option value="all">All</option>
