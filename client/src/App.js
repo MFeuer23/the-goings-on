@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import './App.css';
 import EventsForm from './EventsForm'
+import EventsContainer from './containers/EventsContainer'
 
 class App extends Component {
   render() {
@@ -9,6 +10,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         <EventsForm />
+        <EventsContainer events={this.props.eventInfo}/>
 
 
         </header>
@@ -18,8 +20,9 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
+  debugger;
   return {
-    eventInfo: state
+    eventInfo: state.events.data.events
   }
 }
 
