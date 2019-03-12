@@ -1,6 +1,6 @@
 function eventsReducer(state = {
   loading: false,
-  events: []
+  data: []
 
 }, action) {
   switch (action.type) {
@@ -9,7 +9,7 @@ function eventsReducer(state = {
       return {...state, loading: true}
     case "FETCH_EVENTS":
     console.log(action)
-      return { loading: false, events: action.payload}
+      return { loading: false, data: action.payload}
 
     default:
       return state
