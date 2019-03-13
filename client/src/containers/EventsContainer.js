@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Event from '../components/Event'
+import CardDeck from 'react-bootstrap/CardDeck'
+
 
 
 class EventsContainer extends Component {
@@ -9,9 +11,9 @@ class EventsContainer extends Component {
   render(){
     {if (this.props.events) {
       return (
-        <div>{this.props.events.map((event) =>
+        <CardDeck>{this.props.events.map((event) =>
           <Event key={event.id} info={event} />
-        )} </div>
+        )} </CardDeck>
       )
     } else {
       return (null)
