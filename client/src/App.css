@@ -47,3 +47,17 @@
   display: table;
   clear: both;
 }
+
+#check {
+  float: right;
+  length: 2px;
+  width: 2px;
+}
+
+#check:checked {
+  color: yellow;
+}
+
+#check:not(:checked) {
+  color: white;
+}
