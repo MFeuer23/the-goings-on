@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { fetchEvents } from './actions/EventActions'
 import Button from 'react-bootstrap/Button';
 
 class EventsForm extends Component {
@@ -60,4 +59,4 @@ class EventsForm extends Component {
 
 }
 
-export default connect(null, {fetchEvents})(EventsForm);
+export default EventsForm;
