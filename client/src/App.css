@@ -14,39 +14,9 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
-}
-
-.column {
-  border-style: solid;
-  border-color: coral;
-  float: left;
-  margin: 50px 13px 50px;
-  width: 30%;
-  height: 200px; /* Should be removed. Only for demonstration */
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 #check {
   float: right;
@@ -55,7 +25,7 @@
 }
 
 #check:checked {
-  color: yellow;
+  color: #FFC033;
 }
 
 #check:not(:checked) {
