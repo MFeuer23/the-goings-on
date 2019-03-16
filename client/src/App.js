@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import './App.css';
-import EventsForm from './EventsForm'
+
 import EventsContainer from './containers/EventsContainer'
 
 
@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-body">
-        <EventsForm />
+        
         <br/>
         <EventsContainer events={this.props.eventInfo}/>
 

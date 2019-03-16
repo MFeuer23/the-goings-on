@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Event from '../components/Event'
 import CardDeck from 'react-bootstrap/CardDeck'
-
+import EventsForm from '../EventsForm'
 
 
 class EventsContainer extends Component {
@@ -9,18 +9,16 @@ class EventsContainer extends Component {
 
 
   render(){
-    {if (this.props.events) {
-      return (
-        <CardDeck>{this.props.events.map((event) =>
+    return(
+      <div>
+        <EventsForm />
+        <br />
+        <CardDeck>{this.props.events ? this.props.events.map((event) =>
           <Event key={event.id} info={event} />
-        )} </CardDeck>
-      )
-    } else {
-      return (null)
-    }}
-
+        ) : ""} </CardDeck>
+      </div>
+    )
   }
-
 
 
 }
