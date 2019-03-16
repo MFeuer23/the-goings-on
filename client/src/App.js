@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import './App.css';
 
 import EventsContainer from './containers/EventsContainer'
+import FavoritesContainer from './containers/FavoritesContainer'
 
 
 class App extends Component {
@@ -10,10 +11,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-body">
-        
+
         <br/>
         <EventsContainer events={this.props.eventInfo}/>
-
+        <FavoritesContainer favorites={this.props.favoriteInfo}/>
 
         </header>
         <link
@@ -29,9 +30,9 @@ class App extends Component {
 }
 
 const mapStateToProps = state => {
-
   return {
-    eventInfo: state.events.data.events
+    eventInfo: state.events.data.events,
+    favoriteInfo: state.favorites.favoritesData
   }
 }
 
