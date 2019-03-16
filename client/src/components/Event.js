@@ -2,25 +2,27 @@ import React from 'react';
 import Card from 'react-bootstrap/Card'
 import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
 import Button from 'react-bootstrap/Button'
-import '../App.css'
+
 
 
 const Event = props => {
   console.log(props)
   return(
     <div>
-      <Card bg="secondary">
+      <Card bg="secondary" style={{ width: '14rem' }}>
 
         <Card.Body>
           <Card.Title>
-            <input id="check" type="checkbox" class="fa fa-star"></input>
+            <input id="check" type="checkbox" className="fa fa-star"></input>
             <br/>
             {props.info.title}
           </Card.Title>
-          <Card.Text>{props.info.description}</Card.Text>
-          <ResponsiveEmbed>
-            <embed type="image/svg+xml" src={props.info.sources[0].url} />
-          </ResponsiveEmbed>
+          <br/>
+          <Card.Subtitle>{props.info.description}</Card.Subtitle>
+          <br/>
+          <Card.Link target="_blank" style={{ color: '#8b0000' }} href={props.info.sources[0].url}>Source Link</Card.Link>
+          <br/>
+          <Card.Footer>{props.info.categories[0].title}</Card.Footer>
         </Card.Body>
 
       </Card>
