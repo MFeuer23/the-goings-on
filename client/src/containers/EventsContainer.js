@@ -28,4 +28,4 @@ class EventsContainer extends Component {
 
 }
 
-export default connect(null, {fetchEvents createFavorite})(EventsContainer);
+export default connect(null, {fetchEvents, createFavorite})(EventsContainer);
