@@ -7,13 +7,20 @@ import Button from 'react-bootstrap/Button'
 
 const Event = props => {
   console.log(props)
+
   return(
     <div>
       <Card bg="secondary" style={{ width: '14rem' }}>
 
         <Card.Body>
           <Card.Title>
-            <input id="check" type="checkbox" className="fa fa-star"></input>
+            <input onClick={(event) => props.createFavorite(
+              props.info.title,
+              props.info.description,
+              props.info.categories[0].title,
+              props.info.sources[0].url,
+              event
+            )} id="check" type="checkbox" className="fa fa-star"></input>
             <br/>
             {props.info.title}
           </Card.Title>
