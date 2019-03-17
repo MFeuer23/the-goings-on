@@ -13,9 +13,16 @@ function eventsReducer(state = {
       return {...state, loading: true, favoritesData:[], }
 
     case "FETCH_FAVORITES":
-              // debugger
       console.log(action)
       return {...state, loading:false, favoritesData: action.payload}
+
+    case "DELETE_FAVORITE":
+      console.log(action)
+      return {...state, loading: false,
+      favoritesData: state.favoritesData.filter(
+        favorite => favorite.id !== action.payload.id
+        )
+      }
 
     default:
       return state
