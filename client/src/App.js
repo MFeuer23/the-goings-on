@@ -8,7 +8,7 @@ import FavoritesContainer from './containers/FavoritesContainer'
 
 class App extends Component {
 
-  favs = (arr1, arr2) => {
+  faves = (arr1, arr2) => {
     if (arr1 && arr2) {
       let eArray = arr1.map(x => x.title)
       let fArray = arr2.map(x => x.title)
@@ -29,7 +29,7 @@ class App extends Component {
 
         <br/>
         <EventsContainer events={this.props.eventInfo}
-          faves={this.favs(
+          faves={this.faves(
             this.props.eventInfo,
             this.props.favoriteInfo
           )}
