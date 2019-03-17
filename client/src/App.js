@@ -33,6 +33,7 @@ class App extends Component {
             this.props.eventInfo,
             this.props.favoriteInfo
           )}
+          favorites={this.props.favoriteInfo}
         />
         <FavoritesContainer favorites={this.props.favoriteInfo}/>
 
