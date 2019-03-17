@@ -14,7 +14,8 @@ const Event = props => {
 
         <Card.Body>
           <Card.Title>
-            <input onClick={(event) => props.createFavorite(
+            <input defaultChecked={props.chk}
+              onClick={(event) => props.createFavorite(
               props.info.title,
               props.info.description,
               props.info.categories[0].title,
