@@ -12,6 +12,13 @@ class FavoritesController < ApplicationController
       source_url: params["source_url"],
       category: params["category"]
     )
+    render json: @favorite
+  end
+
+  def destroy
+    @favorite = Favorite.find(params[:id])
+    @favorite.destroy
+    render json: @favorite
   end
 
 
