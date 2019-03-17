@@ -14,7 +14,7 @@ const Event = props => {
 
         <Card.Body>
           <Card.Title>
-            <input id="check" type="checkbox" className="fa fa-star" checked></input>
+            <input id="check" type="checkbox" className="fa fa-star" defaultChecked="true" ></input>
             <br/>
             {props.info.title}
           </Card.Title>
