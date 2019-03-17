@@ -4,12 +4,20 @@ import CardDeck from 'react-bootstrap/CardDeck'
 import EventsForm from '../components/EventsForm'
 import { connect } from 'react-redux'
 import { fetchEvents } from '../actions/EventActions'
-import { createFavorite } from '../actions/FavoriteActions'
+import { createFavorite, deleteFavorite } from '../actions/FavoriteActions'
 
 
 class EventsContainer extends Component {
 
-
+  toggleStar = (event, title, description, category, source_url) => {
+    if (event.target.checked) {
+      this.props.createFavorite(title, description, category, source_url)
+    } else {
+      this.props.deleteFavorite(
+        this.props.favorites.find(favorite => favorite.title === title).id
+      )
+    }
+  }
 
   render(){
     return(
@@ -20,8 +28,8 @@ class EventsContainer extends Component {
         <CardDeck>{this.props.events ?
           this.props.events.map((event) =>
           <Event key={event.id} info={event}
-          chk={this.props.faves ? this.props.faves.includes(event.title) : false} 
-          createFavorite={this.props.createFavorite}/>)
+          chk={this.props.faves ? this.props.faves.includes(event.title) : false}
+          toggleStar={this.toggleStar}/>)
           : ""}
         </CardDeck>
       </div>
@@ -31,4 +39,4 @@ class EventsContainer extends Component {
 
 }
 
-export default connect(null, {fetchEvents, createFavorite})(EventsContainer);
+export default connect(null, {fetchEvents, createFavorite, deleteFavorite})(EventsContainer);
