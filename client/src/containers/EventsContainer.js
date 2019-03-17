@@ -16,9 +16,12 @@ class EventsContainer extends Component {
       <div>
         <EventsForm fetchEvents={this.props.fetchEvents} />
         <br />
+
         <CardDeck>{this.props.events ?
           this.props.events.map((event) =>
-          <Event key={event.id} info={event} createFavorite={this.props.createFavorite}/>)
+          <Event key={event.id} info={event}
+          chk={this.props.faves ? this.props.faves.includes(event.title) : false} 
+          createFavorite={this.props.createFavorite}/>)
           : ""}
         </CardDeck>
       </div>
