@@ -7,13 +7,33 @@ import FavoritesContainer from './containers/FavoritesContainer'
 
 
 class App extends Component {
+
+  favs = (arr1, arr2) => {
+    if (arr1 && arr2) {
+      let eArray = arr1.map(x => x.title)
+      let fArray = arr2.map(x => x.title)
+      let matches = [];
+      for(let i in eArray) {
+          if(fArray.indexOf(eArray[i]) > -1){
+              matches.push(eArray[i]);
+          }
+      }
+      return matches;
+    }
+  };
+
   render() {
     return (
       <div className="App">
         <header className="App-body">
 
         <br/>
-        <EventsContainer events={this.props.eventInfo}/>
+        <EventsContainer events={this.props.eventInfo}
+          faves={this.favs(
+            this.props.eventInfo,
+            this.props.favoriteInfo
+          )}
+        />
         <FavoritesContainer favorites={this.props.favoriteInfo}/>
 
         </header>
