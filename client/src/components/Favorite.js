@@ -14,7 +14,8 @@ const Event = props => {
 
         <Card.Body>
           <Card.Title>
-            <input id="check" type="checkbox" className="fa fa-star" defaultChecked="true" ></input>
+            <input onClick={() => props.delete(props.info.id)}
+            id="check" type="checkbox" className="fa fa-star" defaultChecked="true" ></input>
             <br/>
             {props.info.title}
           </Card.Title>
