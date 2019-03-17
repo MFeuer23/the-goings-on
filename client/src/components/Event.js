@@ -15,12 +15,12 @@ const Event = props => {
         <Card.Body>
           <Card.Title>
             <input defaultChecked={props.chk}
-              onClick={(event) => props.createFavorite(
+              onClick={(event) => props.toggleStar(
+              event,
               props.info.title,
               props.info.description,
               props.info.categories[0].title,
-              props.info.sources[0].url,
-              event
+              props.info.sources[0].url
             )} id="check" type="checkbox" className="fa fa-star"></input>
             <br/>
             {props.info.title}
