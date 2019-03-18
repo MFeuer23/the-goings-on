@@ -2,14 +2,12 @@ import React, { Component } from 'react'
 import Favorite from '../components/Favorite'
 import CardDeck from 'react-bootstrap/CardDeck'
 import { connect } from 'react-redux'
-import { fetchFavorites, deleteFavorite } from '../actions/FavoriteActions'
+import { deleteFavorite } from '../actions/FavoriteActions'
 
 
 
 class FavoritesContainer extends Component {
-  componentDidMount = () => {
-      this.props.fetchFavorites();
-  }
+
 
 
   render(){
@@ -28,4 +26,10 @@ class FavoritesContainer extends Component {
 
 }
 
-export default connect(null, {fetchFavorites, deleteFavorite})(FavoritesContainer);
+const mapStateToProps = state => {
+  return {
+    favorites: state.favorites.favoritesData
+  }
+}
+
+export default connect(mapStateToProps, {deleteFavorite})(FavoritesContainer);
