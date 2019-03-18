@@ -19,6 +19,20 @@ class EventsContainer extends Component {
     }
   }
 
+  faves = (arr1, arr2) => {
+    if (arr1 && arr2) {
+      let eArray = arr1.map(x => x.title)
+      let fArray = arr2.map(x => x.title)
+      let matches = [];
+      for(let i in eArray) {
+          if(fArray.indexOf(eArray[i]) > -1){
+              matches.push(eArray[i]);
+          }
+      }
+      return matches;
+    }
+  };
+
   render(){
     return(
       <div>
@@ -28,7 +42,9 @@ class EventsContainer extends Component {
         <CardDeck>{this.props.events ?
           this.props.events.map((event) =>
           <Event key={event.id} info={event}
-          chk={this.props.faves ? this.props.faves.includes(event.title) : false}
+          chk={this.props.favorites ?
+            this.faves(this.props.events, this.props.favorites).includes(event.title)
+            : false}
           toggleStar={this.toggleStar}/>)
           : ""}
         </CardDeck>
@@ -36,7 +52,13 @@ class EventsContainer extends Component {
     )
   }
 
-
 }
 
-export default connect(null, {fetchEvents, createFavorite, deleteFavorite})(EventsContainer);
+const mapStateToProps = state => {
+  return {
+    events: state.events.data.events,
+    favorites: state.favorites.favoritesData
+  }
+}
+
+export default connect(mapStateToProps, {fetchEvents, createFavorite, deleteFavorite})(EventsContainer);
