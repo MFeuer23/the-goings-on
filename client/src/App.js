@@ -25,9 +25,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="App App-body">
         <NavBar className="App-nav" />
-        <header className="App-body">
         <br/>
         <EventsContainer events={this.props.eventInfo}
           faves={this.faves(
@@ -37,8 +36,6 @@ class App extends Component {
           favorites={this.props.favoriteInfo}
         />
         <FavoritesContainer favorites={this.props.favoriteInfo}/>
-
-        </header>
         <link
           rel="stylesheet"
           href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
