@@ -4,6 +4,7 @@ import './App.css';
 
 import EventsContainer from './containers/EventsContainer'
 import FavoritesContainer from './containers/FavoritesContainer'
+import NavBar from './components/Navbar'
 
 
 class App extends Component {
@@ -25,8 +26,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <NavBar className="App-nav" />
         <header className="App-body">
-
         <br/>
         <EventsContainer events={this.props.eventInfo}
           faves={this.faves(
