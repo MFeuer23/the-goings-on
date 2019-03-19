@@ -1,4 +1,4 @@
-function eventsReducer(state = {
+function favoritesReducer(state = {
   loading: false,
   favoritesData: []
 
