@@ -8,7 +8,7 @@ import NavBar from './components/Navbar'
 import About from './components/About'
 import Header from './components/HeaderImg'
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import { fetchFavorites } from './actions/FavoriteActions'
 
 

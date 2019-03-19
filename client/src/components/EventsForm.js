@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import Button from 'react-bootstrap/Button';
 
 class EventsForm extends Component {

@@ -1,8 +1,5 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card'
-import ResponsiveEmbed from 'react-bootstrap/ResponsiveEmbed'
-import Button from 'react-bootstrap/Button'
-
 
 
 const Event = props => {
