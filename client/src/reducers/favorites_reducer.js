@@ -25,4 +25,4 @@ function favoritesReducer(state = {
   }
 }
 
-export default eventsReducer;
+export default favoritesReducer;
