@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import { Link } from "react-router-dom";
 
 const NavBar = props => {
 
@@ -9,9 +10,9 @@ const NavBar = props => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-          <Nav.Link href="/about">About</Nav.Link>
-          <Nav.Link href="/favorites">Favorites</Nav.Link>
+          <Link to="/">Home</Link>||
+          <Link to="/about">About</Link>||
+          <Link to="/favorites">Favorites</Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>
