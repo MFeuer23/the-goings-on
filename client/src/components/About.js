@@ -11,11 +11,11 @@ const About = props => {
       </p>
       <br />
       <p>
-        This API from NASA inspired budding developer (and soon-to-be Flatiron School graduate) <a href="https://www.linkedin.com/in/mallory-feuer-39a607113/"> Mallory</a> Feuer (linkedin?) to build out a web application that shows information about the most recent natural events based on the parameters selected.
+        This API from NASA inspired budding developer <a href="https://www.linkedin.com/in/mallory-feuer-39a607113/"> Mallory Feuer</a> to build out a web application that shows information about the most recent natural events based on the parameters selected.
       </p>
       <br />
       <p>
-        “The Goings On” utilizes a React/Redux client side, and a Rails API backend. Here’s a Github Repo and a Blog Post about it if you’re curious to learn more about how it works.
+        “The Goings On” utilizes a React/Redux client side, and a Rails API backend. Here’s a <a href="https://github.com/MFeuer23/the-goings-on"> Github Repo</a> and a <a href="http://malloryfeuer.net/the_goings_on_react_redux_rails"> Blog Post</a> about it if you’re curious to learn more about how it works.
       </p>
     </div>
   )
