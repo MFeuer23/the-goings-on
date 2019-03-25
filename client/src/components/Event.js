@@ -7,7 +7,7 @@ const Event = props => {
 
   return(
     <div>
-      <Card bg="secondary" style={{ width: '14rem' }}>
+      <Card bg="secondary" style={{ width: '14rem', height: '20rem', margin: '10px'}}>
 
         <Card.Body>
           <Card.Title>
@@ -23,8 +23,8 @@ const Event = props => {
             {props.info.title}
           </Card.Title>
           <br/>
-          <Card.Subtitle>{props.info.description}</Card.Subtitle>
-          <br/>
+          <Card.Subtitle style={{ height: '4rem', overflowY: 'auto' }}>{props.info.description}</Card.Subtitle>
+
           <Card.Link target="_blank" style={{ color: '#8b0000' }} href={props.info.sources[0].url}>Source Link</Card.Link>
           <br/>
           <Card.Footer>{props.info.categories[0].title}</Card.Footer>
