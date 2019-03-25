@@ -4,7 +4,6 @@ export function fetchEvents(state) {
     dispatch({ type: 'LOADING_EVENTS', state});
     return fetch(`events/${state.category}/${state.status}`, {accept: 'application/json',})
       .then(response => {return response.json() })
-      .then(responseJSON => {return responseJSON})
       .then(payload => dispatch({ type: 'FETCH_EVENTS', payload }));
   };
 }

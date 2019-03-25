@@ -6,7 +6,6 @@ export function createFavorite(title, description, category, source_url) {
       body: JSON.stringify({ title, description, category, source_url})
     })
       .then(response => {return response.json() })
-      .then(responseJSON => {return responseJSON})
       .then(payload => {
         dispatch({ type: 'CREATE_FAVORITE', payload });
       }).catch(function(error) {
@@ -20,7 +19,6 @@ export function fetchFavorites() {
     dispatch({ type: 'LOADING_FAVORITES' });
     return fetch('favorites', {accept: 'application/json',})
       .then(response => {return response.json() })
-      .then(responseJSON => {return responseJSON})
       .then(payload => dispatch({ type: 'FETCH_FAVORITES', payload }));
   };
 }
