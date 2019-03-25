@@ -3,7 +3,7 @@ import React from 'react';
 const About = props => {
 
   return(
-    <div>
+    <div style={{margin: "100px"}}>
       <h2>About</h2>
       <br />
       <p>
