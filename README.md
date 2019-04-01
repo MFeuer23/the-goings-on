@@ -1,6 +1,5 @@
-# README
-
-## the-goings-on
+# the-goings-on
+[Visit Live Site on Heroku](https://the-goings-on.herokuapp.com/)
 ![](/client/public/Screenshot.png)
 
 ### Usage
