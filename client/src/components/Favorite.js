@@ -7,7 +7,7 @@ const Event = props => {
 
   return(
     <div>
-      <Card bg="secondary" style={{ width: '14rem', height: '20rem', margin: '10px' }}>
+      <Card bg="secondary" style={{ width: '14rem', height: '22rem', margin: '10px' }}>
 
         <Card.Body>
           <Card.Title>

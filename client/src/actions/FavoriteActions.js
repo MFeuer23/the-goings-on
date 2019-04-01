@@ -1,6 +1,6 @@
 export function createFavorite(title, description, category, source_url) {
   return dispatch => {
-    return fetch('https://the-goings-on.herokuapp.com/favorites', {
+    return fetch('favorites', {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title, description, category, source_url})
@@ -17,7 +17,7 @@ export function createFavorite(title, description, category, source_url) {
 export function fetchFavorites() {
   return (dispatch) => {
     dispatch({ type: 'LOADING_FAVORITES' });
-    return fetch('https://the-goings-on.herokuapp.com/favorites', {accept: 'application/json',})
+    return fetch('favorites', {accept: 'application/json',})
       .then(response => {return response.json() })
       .then(payload => dispatch({ type: 'FETCH_FAVORITES', payload }));
   };
@@ -25,7 +25,7 @@ export function fetchFavorites() {
 
 export function deleteFavorite(favoriteId) {
     return (dispatch) => {
-        return fetch(`https://the-goings-on.herokuapp.com/favorites/${favoriteId}`, {
+        return fetch(`favorites/${favoriteId}`, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json'}
         })
