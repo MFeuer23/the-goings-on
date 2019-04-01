@@ -1,6 +1,7 @@
 # README
 
 ## the-goings-on
+![](/client/public/Screenshot.png)
 
 ### Usage
 To use this app, just fork and clone. Then in terminal, run `cd the-goings-on`, `bundle install`, `rake db:migrate`, `cd client`, `npm i`, and then finally `rake start`.
