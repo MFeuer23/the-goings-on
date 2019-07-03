@@ -21,5 +21,4 @@ class FavoritesController < ApplicationController
     render json: @favorite
   end
 
-
 end
